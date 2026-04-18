@@ -3,12 +3,13 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { 
+import {
   CheckCircle2, Heart, Award,
-  ChevronDown, Palette, Layout, Type, Shapes, 
-  Image as ImageIcon, MonitorPlay, Presentation, Briefcase, 
-  FileDown, ArrowRight, ExternalLink 
+  ChevronDown, Palette, Layout, Type, Shapes,
+  Image as ImageIcon, MonitorPlay, Presentation, Briefcase,
+  FileDown, ArrowRight, ExternalLink, ArrowUpRight
 } from "lucide-react";
+import Carousel from '@/components/Carousel';
 
 type Module = {
   id: string;
@@ -94,7 +95,7 @@ export default function AboutPage() {
 
   return (
     <div className="bg-background min-h-screen">
-      
+
       {/* 1. About the Initiative (from original /about page) */}
       <div className="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-20">
@@ -110,7 +111,7 @@ export default function AboutPage() {
           <div className="h-96 w-full rounded-[3rem] bg-gradient-to-br from-red-light to-blue-light overflow-hidden relative shadow-2xl">
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] mix-blend-overlay opacity-60 bg-cover bg-center" />
           </div>
-          
+
           <div className="space-y-8">
             <h2 className="text-4xl font-bold text-blue-dark dark:text-white flex items-center gap-3">
               <Heart className="text-red-primary h-8 w-8" />
@@ -121,11 +122,11 @@ export default function AboutPage() {
             </p>
             <ul className="space-y-4">
               <li className="flex items-center gap-3 bg-surface dark:bg-white/5 p-4 rounded-2xl shadow-sm border border-foreground/10">
-                <span className="p-2 rounded-xl bg-blue-light dark:bg-blue-primary/20 text-blue-dark dark:text-blue-light"><Award className="w-5 h-5"/></span>
+                <span className="p-2 rounded-xl bg-blue-light dark:bg-blue-primary/20 text-blue-dark dark:text-blue-light"><Award className="w-5 h-5" /></span>
                 <span className="font-semibold text-lg text-foreground/90">Earn a stipend of ₱1,000 per month</span>
               </li>
               <li className="flex items-center gap-3 bg-surface dark:bg-white/5 p-4 rounded-2xl shadow-sm border border-foreground/10">
-                <span className="p-2 rounded-xl bg-red-light dark:bg-red-primary/20 text-red-dark dark:text-red-light"><CheckCircle2 className="w-5 h-5"/></span>
+                <span className="p-2 rounded-xl bg-red-light dark:bg-red-primary/20 text-red-dark dark:text-red-light"><CheckCircle2 className="w-5 h-5" /></span>
                 <span className="font-semibold text-lg text-foreground/90">Produce actual materials for SK 177 initiatives</span>
               </li>
             </ul>
@@ -138,7 +139,7 @@ export default function AboutPage() {
         <div className="bg-blue-light/30 dark:bg-blue-light/5 py-20 border-y border-foreground/10 relative overflow-hidden">
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-blue-primary/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-red-primary/10 rounded-full blur-3xl pointer-events-none" />
-          
+
           <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-blue-dark dark:text-white mb-6 tracking-tight">
               Program <span className="text-blue-primary">Modules</span>
@@ -180,9 +181,8 @@ export default function AboutPage() {
                           className="w-full px-6 py-5 flex items-center justify-between focus:outline-none"
                         >
                           <div className="flex items-center space-x-5 text-left">
-                            <div className={`p-3 rounded-xl transition-colors ${
-                              isExpanded ? 'bg-blue-primary text-white' : 'bg-blue-light dark:bg-blue-primary/20 text-blue-primary'
-                            }`}>
+                            <div className={`p-3 rounded-xl transition-colors ${isExpanded ? 'bg-blue-primary text-white' : 'bg-blue-light dark:bg-blue-primary/20 text-blue-primary'
+                              }`}>
                               <Icon className="w-6 h-6" />
                             </div>
                             <div>
@@ -220,7 +220,7 @@ export default function AboutPage() {
                                   <p className="text-foreground/70 mb-5 leading-relaxed">
                                     {module.description}
                                   </p>
-                                  
+
                                   <div>
                                     <h4 className="text-sm font-bold text-foreground/90 uppercase tracking-wider mb-3">
                                       Key Topics
@@ -287,10 +287,12 @@ export default function AboutPage() {
             </div>
             <div className="bg-surface dark:bg-white/5 border border-foreground/10 p-8 rounded-3xl w-full shadow-sm hover:shadow-md transition-shadow">
               <h2 className="text-2xl font-bold text-foreground/90 mb-3">Prepare Your Screening Portfolio</h2>
-              <p className="text-foreground/70 mb-6">
-                To evaluate your baseline design skills, we require all applicants to recreate or build upon our provided portfolio sample. You must submit your Canva design link during the application process.
+              <p className="text-foreground/70 mb-6 leading-relaxed">
+                To evaluate your baseline design skills, we require all applicants to recreate or build upon our provided portfolio template. <strong className="text-foreground/90">Click the button below to copy the Canva template and add your designs: </strong><br /><br />
               </p>
-              
+
+              <Carousel />
+
               <div className="bg-blue-light/40 dark:bg-blue-primary/10 border border-blue-primary/20 rounded-2xl p-6 flex flex-col sm:flex-row justify-between items-center gap-4">
                 <div className="flex items-center space-x-4">
                   <div className="p-3 bg-white dark:bg-transparent dark:border dark:border-blue-primary/30 rounded-xl text-blue-primary">
@@ -301,14 +303,14 @@ export default function AboutPage() {
                     <p className="text-sm text-foreground/60">Canva Design Template View</p>
                   </div>
                 </div>
-                <a 
-                  href="https://canva.link/in5sixduoislcwv" 
-                  target="_blank" 
+                <a
+                  href="https://canva.link/in5sixduoislcwv"
+                  target="_blank"
                   rel="noreferrer"
                   className="shrink-0 bg-blue-primary hover:bg-blue-dark text-white px-5 py-2.5 rounded-full font-medium transition-colors shadow-lg flex items-center space-x-2"
                 >
-                  <span>Open Sample</span>
-                  <ExternalLink className="w-4 h-4" />
+                  <span>Download portfolio template</span>
+                  <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>
               <p className="mt-4 text-xs text-foreground/50">
@@ -327,8 +329,8 @@ export default function AboutPage() {
               <p className="text-foreground/70 mb-6">
                 Ready to submit? Head over to the Student Portal to upload your resume, fill out your details, and provide the link to your completed screening portfolio for evaluation.
               </p>
-              <Link 
-                href="/student" 
+              <Link
+                href="/student"
                 className="inline-flex items-center space-x-2 bg-blue-dark hover:bg-blue-primary text-white px-8 py-3 rounded-full font-bold transition-all shadow-xl hover:shadow-2xl"
               >
                 <span>Proceed to Application / Student Portal</span>
