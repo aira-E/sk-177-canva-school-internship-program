@@ -38,7 +38,7 @@ export default function Home() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-            <Link href="/about" className="px-8 py-4 rounded-full bg-blue-primary text-white font-bold text-lg hover:bg-blue-dark hover:scale-105 transition-all shadow-xl shadow-blue-primary/30 flex items-center justify-center space-x-2 w-full sm:w-auto">
+            <Link href="/about#join" className="px-8 py-4 rounded-full bg-blue-primary text-white font-bold text-lg hover:bg-blue-dark hover:scale-105 transition-all shadow-xl shadow-blue-primary/30 flex items-center justify-center space-x-2 w-full sm:w-auto">
               <span>Join the Program</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
