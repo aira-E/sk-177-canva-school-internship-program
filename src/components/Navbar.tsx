@@ -20,7 +20,7 @@ export function Navbar() {
     <nav className="fixed top-0 w-full z-50 canva-glass border-b border-surface/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center space-x-2 text-blue-dark hover:text-blue-primary transition-colors">
+          <Link href="/" className="flex items-center space-x-2 text-blue-dark dark:text-white hover:text-blue-primary dark:hover:text-blue-light transition-colors">
             <div className="bg-blue-primary p-2 rounded-xl text-white">
               <Sparkles className="w-5 h-5" />
             </div>
@@ -34,7 +34,7 @@ export function Navbar() {
                 href={link.href}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-blue-primary relative py-2",
-                  pathname === link.href ? "text-blue-dark" : "text-foreground/70"
+                  pathname === link.href ? "text-blue-dark dark:text-blue-light" : "text-foreground/70"
                 )}
               >
                 {link.name}
@@ -43,7 +43,7 @@ export function Navbar() {
                 )}
               </Link>
             ))}
-            <Link href="/student" className="text-sm font-medium bg-blue-primary text-white px-4 py-2 rounded-full hover:bg-blue-dark transition-colors shadow-lg shadow-blue-primary/20">
+            <Link href="/about#join" className="text-sm font-medium bg-blue-primary text-white px-4 py-2 rounded-full hover:bg-blue-dark transition-colors shadow-lg shadow-blue-primary/20">
               Join Program
             </Link>
           </div>
@@ -66,7 +66,7 @@ export function Navbar() {
               onClick={() => setIsOpen(false)}
               className={cn(
                 "block text-base font-medium px-4 py-2 rounded-xl transition-colors",
-                pathname === link.href ? "bg-blue-light text-blue-dark" : "text-foreground/70 hover:bg-surface"
+                pathname === link.href ? "bg-blue-light dark:bg-blue-primary/20 text-blue-dark dark:text-blue-light" : "text-foreground/70 hover:bg-foreground/5"
               )}
             >
               {link.name}
