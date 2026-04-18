@@ -333,7 +333,7 @@ export default function AboutPage() {
                 href="/student"
                 className="inline-flex items-center space-x-2 bg-blue-dark hover:bg-blue-primary text-white px-8 py-3 rounded-full font-bold transition-all shadow-xl hover:shadow-2xl"
               >
-                <span>Proceed to Application / Student Portal</span>
+                <span> Submit Application </span>
                 <CheckCircle2 className="w-5 h-5" />
               </Link>
             </div>
