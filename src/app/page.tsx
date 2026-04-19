@@ -8,7 +8,7 @@ export default function Home() {
     { title: "Application phase", desc: "Top 10 youth participants selected", icon: Zap },
     { title: "Structured Workshop", desc: "2 whole days of face-to-face Canva workshop", icon: Star },
     { title: "Weekly Outputs", desc: "Complete 1-2 design per week for actual SK 177 initiatives", icon: Layers },
-    { title: "Portfolio Building", desc: "Receive a ₱1,000 monthly stipend and certificate of completion, and build strong portfolio", icon: ArrowRight },
+    { title: "Portfolio Building", desc: "Receive a ₱1,000 monthly stipend, a certificate of completion, and build strong portfolio", icon: ArrowRight },
   ];
 
   return (
