@@ -27,60 +27,116 @@ type Month = {
 
 const curriculum: Month[] = [
   {
-    title: "Month 1: Fundamentals of Design & Canva",
+    title: "Month 1: Foundations of Graphic Design using Canva",
     modules: [
       {
-        id: "w1", week: "Week 1", title: "Introduction to Canva & Design Thinking",
-        description: "Get familiar with the Canva workspace and understand the core principles of design thinking.",
+        id: "w1",
+        week: "Week 1",
+        title: "Graphic Design Essentials",
+        description: "Build a strong foundation in visual design by understanding how elements work together to communicate ideas effectively.",
         icon: Shapes,
-        topics: ["Navigating the Canva Editor", "Understanding the Design Thinking Process", "Empathy in Design", "Creating your first Canva design"]
+        topics: [
+          "Visual hierarchy and layout fundamentals",
+          "Color usage and combinations",
+          "Introduction to mood boards",
+          "Translating concepts into visual direction"
+        ]
       },
       {
-        id: "w2", week: "Week 2", title: "Color Theory & Typography",
-        description: "Master the art of combining colors and selecting typography to communicate effectively.",
+        id: "w2",
+        week: "Week 2",
+        title: "Branding & Visual Identity",
+        description: "Learn how to create consistent and visually appealing brand identities using Canva tools.",
         icon: Palette,
-        topics: ["Psychology of Colors", "Creating Color Palettes in Canva", "Font Pairing Strategies", "Hierarchy and Readability"]
+        topics: [
+          "Core elements of branding (color, typography, imagery)",
+          "Creating a cohesive visual style",
+          "Using Canva Brand Kit",
+          "Maintaining consistency across designs"
+        ]
       },
       {
-        id: "w3", week: "Week 3", title: "Layouts, Grids & Composition",
-        description: "Learn how to structure your designs for maximum impact using grids and alignment.",
+        id: "w3",
+        week: "Week 3",
+        title: "Logo Design & Visual Representation",
+        description: "Explore how to design simple, memorable logos and apply them across different formats.",
         icon: Layout,
-        topics: ["The Rule of Thirds", "Grid Systems in Canva", "White Space and Visual Tension", "Balancing Elements"]
+        topics: [
+          "Principles of effective logo design",
+          "Simplicity, scalability, and versatility",
+          "Using shapes, icons, and typography",
+          "Applying logos to real-world mockups"
+        ]
       },
       {
-        id: "w4", week: "Week 4", title: "Branding & Visual Identity",
-        description: "Develop comprehensive brand kits and understand how to maintain visual consistency.",
+        id: "w4",
+        week: "Week 4",
+        title: "Print Design & Layout Composition",
+        description: "Understand how to organize content and design materials intended for print.",
         icon: Type,
-        topics: ["What makes a strong Brand?", "Setting up Canva Brand Kits", "Designing Logos and Assets", "Creating Brand Guidelines"]
+        topics: [
+          "Grid systems and alignment",
+          "Structuring information clearly",
+          "Designing brochures and flyers",
+          "Exporting designs for print"
+        ]
       }
     ]
   },
   {
-    title: "Month 2: Advanced Design & Workflow",
+    title: "Month 2: Digital Content & Advanced Canva Skills",
     modules: [
       {
-        id: "w5", week: "Week 5", title: "UI/UX Principles in Canva",
-        description: "Apply user interface and user experience principles to create functional digital designs.",
+        id: "w5",
+        week: "Week 5",
+        title: "Creating Scroll-Stopping Content",
+        description: "Learn how to design engaging visuals optimized for digital platforms.",
         icon: MonitorPlay,
-        topics: ["Designing Wireframes", "Mocking up Websites/Apps", "Interactive Canva Prototypes", "Accessibility in Design"]
+        topics: [
+          "Visual storytelling for social media",
+          "Designing for mobile-first formats",
+          "Content hierarchy and emphasis",
+          "Maintaining consistency across posts"
+        ]
       },
       {
-        id: "w6", week: "Week 6", title: "Social Media & Animations",
-        description: "Create engaging, dynamic content optimized for various social media platforms.",
+        id: "w6",
+        week: "Week 6",
+        title: "Campaign Design & Content Systems",
+        description: "Develop the ability to create cohesive sets of designs for campaigns or projects.",
         icon: ImageIcon,
-        topics: ["Platform Specific Dimensions", "Canva Animation Effects", "Video Editing Basics", "Designing Carousels"]
+        topics: [
+          "Campaign planning and structure",
+          "Designing multiple related assets",
+          "Template systems and reuse",
+          "Batch content creation"
+        ]
       },
       {
-        id: "w7", week: "Week 7", title: "Presentations & Pitch Decks",
-        description: "Design compelling presentations that captivate audiences and tell a story.",
+        id: "w7",
+        week: "Week 7",
+        title: "Designing with AI in Canva",
+        description: "Discover how to use Canva’s AI tools to improve speed and creativity.",
         icon: Presentation,
-        topics: ["Storytelling with Data", "Dynamic Canva Presentations", "Adding Audio and Voiceovers", "Pitch Deck Structures"]
+        topics: [
+          "AI-assisted design tools (Magic Design, Magic Resize)",
+          "Generating layouts and content quickly",
+          "Enhancing visuals with automation",
+          "Streamlining design workflow"
+        ]
       },
       {
-        id: "w8", week: "Week 8", title: "Final Projects & Portfolio Building",
-        description: "Compile your best work into a stunning portfolio and present your final project.",
+        id: "w8",
+        week: "Week 8",
+        title: "Capstone: Complete Design Project",
+        description: "Apply all learned skills to produce a cohesive and polished set of designs.",
         icon: Briefcase,
-        topics: ["Curating your Work", "Creating a Canva Website Portfolio", "Presenting your Final Project", "Career Preparation"]
+        topics: [
+          "End-to-end design process",
+          "Maintaining brand consistency",
+          "Multi-format design adaptation",
+          "Preparing portfolio-ready outputs"
+        ]
       }
     ]
   }
@@ -124,7 +180,7 @@ export default function AboutPage() {
               </li>**/}
               <li className="flex items-center gap-3 bg-surface dark:bg-white/5 p-4 rounded-2xl shadow-sm border border-foreground/10">
                 <span className="p-2 rounded-xl bg-yellow-primary/20 text-yellow-600 dark:text-yellow-400"><Palette className="w-5 h-5" /></span>
-                <span className="font-semibold text-lg text-foreground/90"> Canva Pro grant</span>
+                <span className="font-semibold text-lg text-foreground/90"> Canva Pro Individual Access Grant </span>
               </li>
               <li className="flex items-center gap-3 bg-surface dark:bg-white/5 p-4 rounded-2xl shadow-sm border border-foreground/10">
                 <span className="p-2 rounded-xl bg-blue-light dark:bg-blue-primary/20 text-blue-dark dark:text-blue-light"><Briefcase className="w-5 h-5" /></span>
