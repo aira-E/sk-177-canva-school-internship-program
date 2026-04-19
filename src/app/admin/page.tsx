@@ -40,7 +40,7 @@ export default function AdminPortal() {
   if (!isLoggedIn) {
     return (
       <div className="flex-1 flex items-center justify-center p-4">
-        <div className="bg-white p-8 rounded-3xl shadow-xl w-full max-w-md text-center">
+        <div className="canva-glass p-8 rounded-3xl shadow-xl border border-red-100 w-full max-w-md text-center">
           <h1 className="text-2xl font-bold text-red-dark mb-6">Admin Portal</h1>
           <button 
             onClick={() => setIsLoggedIn(true)}
@@ -63,7 +63,7 @@ export default function AdminPortal() {
     <div className="max-w-7xl mx-auto px-4 py-12 w-full">
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-4xl font-bold text-red-dark">Admin Dashboard</h1>
-        <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-red-light shadow-sm">
+        <div className="flex items-center gap-2 canva-glass px-4 py-2 rounded-full border border-red-light shadow-sm">
           <Bell className="w-5 h-5 text-red-primary" />
           <span className="font-semibold">{notifications.length} Alerts</span>
         </div>
@@ -71,7 +71,7 @@ export default function AdminPortal() {
       
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <div className="lg:col-span-3">
-          <div className="bg-white rounded-3xl shadow-sm border border-red-50 overflow-hidden">
+          <div className="canva-glass rounded-3xl shadow-sm border border-red-50 overflow-hidden">
             <div className="p-6 border-b border-surface/50 bg-red-light/10">
               <h2 className="text-xl font-bold text-red-dark flex items-center gap-2">
                 <Users className="w-5 h-5" /> Student Management
@@ -89,7 +89,7 @@ export default function AdminPortal() {
                 </thead>
                 <tbody className="divide-y divide-surface/50">
                   {students.map((s) => (
-                    <tr key={s.id} className="hover:bg-slate-50 transition-colors">
+                    <tr key={s.id} className="hover:bg-white/40 dark:hover:bg-white/5 transition-colors">
                       <td className="p-4 pl-6 font-medium">{s.name}</td>
                       <td className="p-4 text-foreground/60">{s.email}</td>
                       <td className="p-4">
@@ -116,7 +116,7 @@ export default function AdminPortal() {
         </div>
 
         <div className="lg:col-span-1">
-          <div className="bg-white rounded-3xl shadow-sm border border-blue-50 p-6 h-full">
+          <div className="canva-glass rounded-3xl shadow-sm border border-blue-50 p-6 h-full">
             <h2 className="text-xl font-bold text-blue-dark flex items-center gap-2 mb-6">
               <Bell className="w-5 h-5" /> Live Feed
             </h2>

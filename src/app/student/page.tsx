@@ -11,7 +11,7 @@ export default function StudentPortal() {
   if (!isLoggedIn) {
     return (
       <div className="flex-1 flex items-center justify-center p-4">
-        <div className="bg-white p-8 rounded-3xl shadow-xl border border-blue-100 w-full max-w-md text-center">
+        <div className="canva-glass p-8 rounded-3xl shadow-xl w-full max-w-md text-center border border-blue-100">
           <h1 className="text-2xl font-bold text-blue-dark mb-6">Student Portal</h1>
           <button 
             onClick={() => setIsLoggedIn(true)}
@@ -30,7 +30,7 @@ export default function StudentPortal() {
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 space-y-8">
-          <div className="bg-white rounded-3xl p-8 shadow-sm border border-blue-50">
+          <div className="canva-glass rounded-3xl p-8 shadow-sm border border-blue-50">
             <h2 className="text-2xl font-bold mb-6 text-foreground">Current Modules</h2>
             <div className="space-y-4">
               <div className="flex justify-between items-center p-4 bg-red-light/30 rounded-2xl border border-red-light">
@@ -50,7 +50,7 @@ export default function StudentPortal() {
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl p-8 shadow-sm border border-blue-50">
+          <div className="canva-glass rounded-3xl p-8 shadow-sm border border-blue-50">
             <h2 className="text-2xl font-bold mb-6 text-foreground">Submit Work</h2>
             <form action={async (formData) => {
               setUploading(true);
@@ -86,7 +86,7 @@ export default function StudentPortal() {
         </div>
 
         <div className="space-y-8">
-          <div className="bg-red-dark rounded-3xl p-8 text-white">
+          <div className="bg-red-dark/80 backdrop-blur-md border border-red-dark/50 rounded-3xl p-8 text-white">
             <h2 className="text-2xl font-bold mb-4">Deadlines</h2>
             <ul className="space-y-4">
               <li className="flex justify-between pb-4 border-b border-white/20">
@@ -100,7 +100,7 @@ export default function StudentPortal() {
             </ul>
           </div>
           
-          <div className="bg-white rounded-3xl p-8 shadow-sm border border-blue-50">
+          <div className="canva-glass rounded-3xl p-8 shadow-sm border border-blue-50">
             <h2 className="text-xl font-bold mb-4">FAQ</h2>
             <div className="space-y-4">
               <details className="group">
