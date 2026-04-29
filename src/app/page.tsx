@@ -5,10 +5,9 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const timeline = [
-    { title: "Application phase", desc: "Top 10 youth participants selected", icon: Zap },
-    { title: "Structured Workshop", desc: "2 whole days of face-to-face Canva workshop", icon: Star },
-    { title: "Weekly Outputs", desc: "Complete 1-2 design per week for actual SK 177 initiatives", icon: Layers },
-    { title: "Portfolio Building", desc: "Receive a ₱1,000 monthly stipend, a certificate of completion, and build strong portfolio", icon: ArrowRight },
+    { title: "Phase 1: Career Seminar", desc: "An introductory session on Graphic Design as a career path for 30 participants.", icon: Zap },
+    { title: "Phase 2: Canva Workshop", desc: "The top 10 participants with the most outstanding portfolios will be selected for an intensive, 2-day face-to-face Canva workshop.", icon: Star },
+    { title: "Phase 3: SK Office Internship", desc: "Selected designers will undergo a 2-month internship, producing weekly designs for actual SK 177 initiatives.", icon: Layers },
   ];
 
   return (
@@ -42,9 +41,9 @@ export default function Home() {
               <span>Join the Program</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link href="/gallery" className="px-8 py-4 rounded-full bg-white text-blue-dark border border-blue-100 font-bold text-lg hover:bg-blue-50 hover:scale-105 transition-all shadow-sm w-full sm:w-auto text-center">
+            {/*<Link href="/gallery" className="px-8 py-4 rounded-full bg-white text-blue-dark border border-blue-100 font-bold text-lg hover:bg-blue-50 hover:scale-105 transition-all shadow-sm w-full sm:w-auto text-center">
               View Portfolio
-            </Link>
+            </Link> */}
           </div>
         </motion.div>
       </section>
@@ -56,7 +55,7 @@ export default function Home() {
           <p className="text-foreground/60 text-lg">A structured path to learning immersion, training, and building a high-quality portfolio.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           <div className="hidden md:block absolute top-12 left-0 w-full h-1 bg-gradient-to-r from-blue-light via-red-light to-transparent -z-10 rounded-full" />
 
           {timeline.map((step, index) => (

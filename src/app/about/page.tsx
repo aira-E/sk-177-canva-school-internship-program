@@ -394,12 +394,15 @@ export default function AboutPage() {
               <p className="text-foreground/70 mb-6">
                 Ready to submit? Head over to the Student Portal to upload your resume, fill out your details, and provide the link to your completed screening portfolio for evaluation.
               </p>
-              <button
+              <a
+                href="https://forms.gle/rM4XPMtbvVwidw9S9"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center space-x-2 bg-blue-dark hover:bg-blue-primary text-white px-8 py-3 rounded-full font-bold transition-all shadow-xl hover:shadow-2xl"
               >
                 <span> Submit Application </span>
                 <CheckCircle2 className="w-5 h-5" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
